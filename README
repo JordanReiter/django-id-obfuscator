@@ -1,0 +1,7 @@
+To install:
+
+`$ python setup.py install`
+
+To configure, make sure to put ID_OBFUSCATOR_KEY in the settings. You can generate a key by running id_obfuscator.utils.generate_secret_key()
+
+Unlike a simple base conversion like Base58, id_obfuscator also uses an obfuscator key which ensures that adjacent ids are not simply off by one letter or number. Note that it is not secure and with enough ids with corresponding numbers, a hacker could figure out the correct ID. This is therefore recommended for lower security use.
