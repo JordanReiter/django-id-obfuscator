@@ -1,4 +1,4 @@
-#from django.conf import settings
+from django.conf import settings
 import random, re
 from id_obfuscator import base58
 
@@ -56,4 +56,3 @@ def deobfuscate(s, key=settings.ID_OBFUSCATOR_KEY):
         asc += base58.characters[k]
     result = base58.b58decode(asc)
     return result
-
