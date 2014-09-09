@@ -3,8 +3,8 @@ import random, re
 from id_obfuscator import base58
 
 def generate_secret_key(length=40):
-    random.sample(base58.characters, length)
-    
+    return ''.join(random.sample(base58.characters, length))
+
 def obfuscate(i, length=8, key=settings.ID_OBFUSCATOR_KEY):
     i = int(i)
     if i < 0:
