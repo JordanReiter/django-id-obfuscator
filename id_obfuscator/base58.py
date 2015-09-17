@@ -19,6 +19,8 @@
 
 # spec: http://www.flickr.com/groups/api/discuss/72157616713786392/
 
+from __future__ import print_function
+
 __b58chars = '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
 __b58base = len(__b58chars) # let's not bother hard-coding
 
@@ -50,8 +52,8 @@ def b58decode(encoded):
 
 if __name__ == '__main__':
     x = b58encode(12345678)
-    print x, '26gWw'
-    print b58decode(x), 12345678
+    print(x, '26gWw')
+    print(b58decode(x), 12345678)
 
 characters = __b58chars
 base = __b58base
